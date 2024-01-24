@@ -1,4 +1,4 @@
-const removeFromArray = function(arr, ...theArgs) {
+/* const removeFromArray = function(arr, ...theArgs) {
 
     let outputArr = arr;
 
@@ -22,7 +22,14 @@ const removeFromArray = function(arr, ...theArgs) {
     }
 
     return outputArr;
-};
+
+}; */
+
+// Alternate more efficient method
+
+const removeFromArray = function(arr, ...theArgs) {
+    return arr.filter((valueF) => !theArgs.includes(valueF));
+}
 
 // Do not edit below this line
 module.exports = removeFromArray;
