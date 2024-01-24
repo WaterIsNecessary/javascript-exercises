@@ -6,7 +6,9 @@ const repeatString = function(str, num) {
             str += inputStr;
         }
     } else if (num === 0) {
-        str = ""
+        str = "";
+    } else {
+        str = "ERROR";
     }
     return str;
 };
