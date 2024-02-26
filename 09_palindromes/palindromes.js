@@ -1,23 +1,8 @@
 const palindromes = function (str) {
 
-    const rawArray = str.toLowerCase().split('');
-
-    const filteredArray = rawArray.filter((el,ind,arr) => {
-        if (el === " " || el === "." || el === "!" || el === ",") return false;
-        else return true;
-    });
-
-    const frontToBack = filteredArray.join('');
-    
-    const backToFront = filteredArray.reverse().join('');    
-
-    // remove these . " " ! ,
-    // lowercase
-    // now use str as a reference 
-
-    
-
-    return (backToFront === frontToBack) ? true : false;
+    const regex = /[^a-z0-9]/g;
+    const strPuncEtcRemoved = str.toLowerCase().replace(regex,"");
+    return strPuncEtcRemoved.split('').reverse().join('') === strPuncEtcRemoved;    
     
 };
 
