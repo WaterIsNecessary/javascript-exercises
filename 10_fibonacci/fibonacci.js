@@ -2,6 +2,13 @@ const fibonacci = function(rawMember) {
 
     const filteredMember = +rawMember;
 
+    // You could replace the else if with if and remove the else syntax and
+    // just use the code within it - the code still works. YOu should research
+    // whether what you have done is best practice to be able to clearly see
+    // what the code is doing OR if removing the else if and replacing with
+    // if and removing the else syntax and just having the code contained
+    // within it there is better practice.
+
     if (filteredMember === 0) return 0;
     
     else if (filteredMember < 0) return "OOPS";
