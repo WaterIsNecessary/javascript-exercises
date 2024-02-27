@@ -2,11 +2,11 @@ const fibonacci = function(rawMember) {
 
     const filteredMember = +rawMember;
 
-    if (filteredMember === 0) {
-        return 0;
-    } else if (filteredMember < 0) {
-        return "OOPS";
-    } else {        
+    if (filteredMember === 0) return 0;
+    
+    else if (filteredMember < 0) return "OOPS";
+    
+    else {
 
         const fibonacciStart = [1,1];    
 
@@ -17,6 +17,7 @@ const fibonacci = function(rawMember) {
         }; 
 
         return fibonacciStart[filteredMember - 1];
+
     }
 };
 
